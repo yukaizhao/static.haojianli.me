@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>好简历 - AI 驱动的智能简历优化工具</title>
+    <meta
+      name="description"
+      content="AI 驱动的智能简历优化工具，提供结构化诊断、岗位定制改写与成果量化建议，帮你快速提升简历竞争力。"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            borderRadius: {
+              "card-lg": "1.25rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .bg-page {
+        background-color: #f8fafc;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "好简历",
+        "url": "https://haojianli.me",
+        "description": "AI 驱动的智能简历优化工具，提供结构化诊断、岗位定制改写与成果量化建议，帮你快速提升简历竞争力。",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "description": "免费体验简历诊断与优化"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bg-page text-slate-900">
+      <div
+        class="mx-auto w-full max-w-[1440px] px-6 pb-24 pt-12 md:px-10 md:pt-14 lg:px-14 lg:pt-16"
+      >
+        <!-- Hero Section -->
+        <section
+          aria-labelledby="hero-heading"
+          class="rounded-[1.25rem] border border-slate-200 bg-white p-6 shadow-sm md:p-10"
+        >
+          <div class="grid gap-7 lg:grid-cols-[1.5fr_1fr] lg:gap-8">
+            <div>
+              <span
+                class="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600"
+              >
+                为求职转化率而生
+              </span>
+              <h1
+                id="hero-heading"
+                class="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-slate-900 md:text-5xl lg:text-[56px]"
+              >
+                把经历描述升级为岗位匹配的成果表达
+              </h1>
+              <p
+                class="mt-5 max-w-3xl text-base leading-7 text-slate-600 md:text-lg"
+              >
+                好简历聚焦"诊断 → 优化 → 反馈 →
+                迭代"闭环，帮助你把简历从"描述做过什么"变成"证明能带来什么结果"。
+              </p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="https://haojianli.me/auth"
+                  class="inline-flex h-11 items-center justify-center rounded-lg bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-800"
+                >
+                  上传简历开始优化
+                </a>
+                <a
+                  href="https://haojianli.me/workspace"
+                  class="inline-flex h-11 items-center justify-center rounded-lg border border-slate-300 bg-white px-5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                >
+                  查看工作流演示
+                </a>
+              </div>
+              <ul
+                class="mt-6 flex flex-wrap gap-2.5 text-sm text-slate-600"
+                aria-label="产品特性"
+              >
+                <li class="rounded-md bg-slate-100 px-3 py-1.5">
+                  支持 PDF / DOCX / 文本
+                </li>
+                <li class="rounded-md bg-slate-100 px-3 py-1.5">
+                  诊断 + 改写 + 导出
+                </li>
+                <li class="rounded-md bg-slate-100 px-3 py-1.5">
+                  岗位定制与版本回滚
+                </li>
+              </ul>
+            </div>
+
+            <!-- Optimization Dashboard Aside -->
+            <aside
+              class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              aria-label="优化效果预览"
+            >
+              <p
+                class="text-xs font-medium uppercase tracking-[0.12em] text-slate-500"
+              >
+                优化看板
+              </p>
+              <dl
+                class="mt-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4"
+              >
+                <dt class="text-sm text-slate-500">总分提升</dt>
+                <dd class="mt-1 text-3xl font-bold text-slate-900">
+                  68 → 83
+                </dd>
+              </dl>
+              <div class="mt-4 space-y-3" role="list" aria-label="优化指标">
+                <div role="listitem">
+                  <div
+                    class="mb-1 flex items-center justify-between text-sm text-slate-600"
+                  >
+                    <span>岗位匹配度</span>
+                    <strong class="text-slate-900">+11</strong>
+                  </div>
+                  <div
+                    class="h-2 rounded-full bg-slate-200"
+                    role="progressbar"
+                    aria-valuenow="72"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label="岗位匹配度 72%"
+                  >
+                    <div class="h-2 w-[72%] rounded-full bg-slate-800"></div>
+                  </div>
+                </div>
+                <div role="listitem">
+                  <div
+                    class="mb-1 flex items-center justify-between text-sm text-slate-600"
+                  >
+                    <span>成果量化</span>
+                    <strong class="text-slate-900">+9</strong>
+                  </div>
+                  <div
+                    class="h-2 rounded-full bg-slate-200"
+                    role="progressbar"
+                    aria-valuenow="64"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label="成果量化 64%"
+                  >
+                    <div class="h-2 w-[64%] rounded-full bg-slate-700"></div>
+                  </div>
+                </div>
+                <div role="listitem">
+                  <div
+                    class="mb-1 flex items-center justify-between text-sm text-slate-600"
+                  >
+                    <span>关键词覆盖</span>
+                    <strong class="text-slate-900">+8</strong>
+                  </div>
+                  <div
+                    class="h-2 rounded-full bg-slate-200"
+                    role="progressbar"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label="关键词覆盖 60%"
+                  >
+                    <div class="h-2 w-[60%] rounded-full bg-slate-600"></div>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-slate-600">
+                每条建议均包含：为什么改、改哪里、如何改。
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Core Features Section -->
+        <section aria-labelledby="features-heading" class="pt-12">
+          <h2
+            id="features-heading"
+            class="text-2xl font-semibold tracking-tight text-slate-900"
+          >
+            核心能力
+          </h2>
+          <div class="mt-6 grid gap-4 md:grid-cols-3">
+            <article
+              class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <h3 class="text-lg font-semibold text-slate-900">结构化诊断</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">
+                从可读性、成果量化、关键词覆盖、ATS
+                友好度等维度评分，并给出可执行建议。
+              </p>
+            </article>
+            <article
+              class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <h3 class="text-lg font-semibold text-slate-900">JD 岗位定制</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">
+                自动解析岗位要求，生成匹配差距清单，快速输出更契合目标岗位的简历版本。
+              </p>
+            </article>
+            <article
+              class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <h3 class="text-lg font-semibold text-slate-900">问答驱动改写</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">
+                通过关键问题补齐事实证据，支持保守/平衡/强化三种模式，避免黑盒重写。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Flow Steps Section -->
+        <section aria-labelledby="steps-heading" class="pt-12">
+          <h2
+            id="steps-heading"
+            class="text-2xl font-semibold tracking-tight text-slate-900"
+          >
+            三步完成一次高质量优化
+          </h2>
+          <ol class="mt-6 grid gap-4 md:grid-cols-3">
+            <li
+              class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <p class="text-sm font-semibold text-slate-500">Step 1</p>
+              <p class="mt-2 text-sm leading-7 text-slate-700">
+                上传简历或粘贴文本，系统完成解析并建立基线评分。
+              </p>
+            </li>
+            <li
+              class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <p class="text-sm font-semibold text-slate-500">Step 2</p>
+              <p class="mt-2 text-sm leading-7 text-slate-700">
+                输入目标 JD，回答少量关键问题，定位改写优先级。
+              </p>
+            </li>
+            <li
+              class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <p class="text-sm font-semibold text-slate-500">Step 3</p>
+              <p class="mt-2 text-sm leading-7 text-slate-700">
+                查看改前/改后差异与分数变化，采纳后导出 PDF 或 DOCX。
+              </p>
+            </li>
+          </ol>
+          <div class="mt-8 flex justify-center md:justify-start">
+            <a
+              href="https://haojianli.me/auth"
+              class="inline-flex h-12 w-full items-center justify-center rounded-lg bg-slate-900 px-7 text-base font-semibold text-white transition hover:bg-slate-800 md:w-auto"
+            >
+              立即免费体验
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
